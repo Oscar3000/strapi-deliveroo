@@ -1,0 +1,24 @@
+{
+  "name": "strapi-deliveroo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "apollo-boost": "^0.4.9",
+    "bootstrap": "^4.5.0",
+    "gql": "^1.1.2",
+    "graphql": "^15.1.0",
+    "next": "9.4.4",
+    "next-apollo": "^4.0.1",
+    "react": "16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "16.13.1",
+    "reactstrap": "^8.4.1",
+    "recompose": "^0.30.0"
+  }
+}
