@@ -1,21 +1,22 @@
 FROM strapi/strapi
 
-ENV YARN_VERSION 1.13.0
+#ENV YARN_VERSION 1.13.0
+
+RUN echo "unsafe-perm = true" >> ~/.npmrc
 
 #setting up working directory
 WORKDIR /usr/src/app
 
-#RUN npm i strapi@alpha -g
-
-COPY package*.json ./
+#copying source files
+COPY . .
 
 RUN npm install
 
-#copying source files
-COPY . .
+RUN npm run postinstall
 
 # running strapi setup                  
 RUN npm run setup
 
 # Running the app
 CMD [ "npm", "start" ]
+#CMD [ "chmod", "+x", "./strapi.sh" ]
